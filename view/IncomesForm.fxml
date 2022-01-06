@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomesForAdminContext" prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomesFormController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #7f8c8d;">
+         <children>
+            <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#adminDashBoardOnAction" text="Back">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator layoutX="31.0" layoutY="214.0" prefHeight="3.0" prefWidth="146.0" />
+            <Label layoutX="40.0" layoutY="210.0" prefHeight="64.0" prefWidth="120.0" text="Incomes" textFill="WHITE">
+               <font>
+                  <Font name="Algerian" size="27.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="328.0" onAction="#monthlyIncomeOnAction" prefHeight="57.0" prefWidth="120.0" style="-fx-background-color: #34495e;" text="Monthly" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Medium" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="40.0" layoutY="410.0" onAction="#annuallyIncomeOnAction" prefHeight="57.0" prefWidth="120.0" style="-fx-background-color: #34495e;" text="Annually" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Medium" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="106.0" fitWidth="150.0" layoutX="45.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="48.0" layoutY="173.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="61.0" prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #3498db;" />
+      <AnchorPane layoutX="396.0" layoutY="29.0" prefHeight="64.0" prefWidth="228.0" style="-fx-background-color: #95E0E0; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 10;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" layoutX="13.0" layoutY="8.0" prefHeight="49.0" prefWidth="219.0" text="Incomes">
+               <font>
+                  <Font name="Bauhaus 93" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="incomeContext" layoutX="200.0" layoutY="110.0" prefHeight="637.0" prefWidth="898.0">
+         <children>
+            <AreaChart prefHeight="551.0" prefWidth="861.0" style="-fx-vertical-grid-lines-visible: true;" title="Monthly Income">
+              <xAxis>
+                <CategoryAxis endMargin="0.0" label="Time" side="BOTTOM" startMargin="0.0" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Incom" minorTickCount="1" side="LEFT" upperBound="100000.0" />
+              </yAxis>
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </AreaChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

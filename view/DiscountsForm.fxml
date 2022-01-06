@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="discountsContext" prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #34495e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DiscountsFormController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="220.0" style="-fx-background-color: #636e72;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="509.0" onAction="#cancelBookingOnAction" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #033E3E; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Canceling" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="595.0" onAction="#guestOnAction" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #033E3E; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Guest" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="423.0" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #636e90; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Discounts" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="337.0" onAction="#mealsOnAction" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #033E3E; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Meals" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="249.0" onAction="#checkOutOnAction" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #033E3E; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Check Out" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="162.0" onAction="#checkInOnAction" prefHeight="62.0" prefWidth="171.0" style="-fx-background-color: #033E3E; -fx-background-radius: 30; -fx-border-color: white; -fx-border-radius: 30;" text="Check In" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="27.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="78.0" layoutY="63.0" prefHeight="62.0" prefWidth="685.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label layoutX="267.0" text="Discounts">
+               <font>
+                  <Font name="Magneto Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#backToRepDashOnAction" prefHeight="31.0" prefWidth="62.0" text="Home" />
+      <TableView fx:id="tblRmDiscount" layoutX="231.0" layoutY="199.0" prefHeight="544.0" prefWidth="382.0">
+        <columns>
+          <TableColumn fx:id="colRmType" prefWidth="110.0" text="Room Type" />
+          <TableColumn fx:id="colDRate" prefWidth="124.0" text="Discount Rate" />
+            <TableColumn fx:id="colWhen" prefWidth="147.0" text="Until when" />
+        </columns>
+      </TableView>
+      <TableView layoutX="638.0" layoutY="199.0" prefHeight="544.0" prefWidth="439.0">
+         <columns>
+            <TableColumn prefWidth="110.0" text="Meal Type" />
+            <TableColumn prefWidth="107.0" text="Discount Rate" />
+            <TableColumn minWidth="0.0" prefWidth="108.0" text="Meal Name" />
+            <TableColumn minWidth="0.0" prefWidth="113.0" text="Until when" />
+         </columns>
+      </TableView>
+      <Label layoutX="369.0" layoutY="157.0" text="Rooms" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="821.0" layoutY="157.0" text="Meals" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

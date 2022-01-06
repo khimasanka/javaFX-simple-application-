@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="637.0" prefWidth="898.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnnuallyIncomesFormController">
+   <children>
+      <AreaChart fx:id="areaChart" prefHeight="551.0" prefWidth="861.0" title="Annually Inomes">
+        <xAxis>
+          <CategoryAxis label="Time" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Income" side="LEFT" upperBound="1500000.0" />
+        </yAxis>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </AreaChart>
+   </children>
+</AnchorPane>

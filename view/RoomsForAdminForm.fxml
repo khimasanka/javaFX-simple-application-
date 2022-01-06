@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomForAdmContext" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomsForAdminFormController">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #7f8c8d;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="27.0" layoutY="196.0" prefHeight="3.0" prefWidth="146.0" />
+            <Label layoutX="51.0" layoutY="210.0" prefHeight="64.0" prefWidth="99.0" text="Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Algerian" size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#backToAdminDashBoardOnAction" text="Back" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="40.0" layoutY="309.0" onAction="#bookedRoomsWindowOnAction" prefHeight="137.0" prefWidth="120.0" style="-fx-background-color: #51B5AF; -fx-background-radius: 10;" text="Booked Rooms Details" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="106.0" fitWidth="150.0" layoutX="47.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="154.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="61.0" prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #3498db;" />
+      <AnchorPane layoutX="386.0" layoutY="29.0" prefHeight="64.0" prefWidth="228.0" style="-fx-background-color: #95E0E0; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="13.0" layoutY="8.0" prefHeight="49.0" prefWidth="219.0" text="Rooms Details">
+               <font>
+                  <Font name="Bauhaus 93" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtId" alignment="CENTER" labelFloat="true" layoutX="217.0" layoutY="137.0" onAction="#moveToType" prefHeight="28.0" prefWidth="192.0" promptText="Room Id" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="691.0">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtType" alignment="CENTER" labelFloat="true" layoutX="452.0" layoutY="137.0" onAction="#moveToCapacity" prefHeight="29.0" prefWidth="181.0" promptText="Room Type" AnchorPane.rightAnchor="467.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCapacity" alignment="CENTER" labelFloat="true" layoutX="677.0" layoutY="137.0" onAction="#moveToModStatus" prefHeight="29.0" prefWidth="200.0" promptText="Room Capacity" AnchorPane.rightAnchor="223.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtModStatus" alignment="CENTER" labelFloat="true" layoutX="919.0" layoutY="137.0" onAction="#moveToBooking" prefHeight="29.0" prefWidth="155.0" promptText="Modify status" AnchorPane.rightAnchor="26.0">
+         <font>
+            <Font name="Book Antiqua" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPrice" alignment="CENTER" labelFloat="true" layoutX="460.0" layoutY="185.0" onAction="#moveToSave" prefHeight="31.0" prefWidth="250.0" promptText="Price" AnchorPane.rightAnchor="390.0" />
+      <JFXTextField fx:id="txtBkStatus" alignment="CENTER" labelFloat="true" layoutX="217.0" layoutY="185.0" onAction="#moveToPrice" prefHeight="31.0" prefWidth="200.0" promptText="Booking Status" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="683.0" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="655.0" layoutY="185.0" onAction="#saveUpdateOnAction" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #2330e4; -fx-background-radius: 20;" text="Save" textFill="WHITE" AnchorPane.rightAnchor="46.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblRooms" layoutX="208.0" layoutY="235.0" prefHeight="313.0" prefWidth="589.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="235.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="100.0" text="Id" />
+          <TableColumn fx:id="colType" prefWidth="107.0" text="Type" />
+            <TableColumn fx:id="colCapacity" prefWidth="146.0" text="Capacity" />
+            <TableColumn fx:id="colModStatus" prefWidth="154.0" text="Modify Status" />
+            <TableColumn fx:id="colBooking" prefWidth="122.0" text="Booking " />
+            <TableColumn fx:id="colPrice" prefWidth="158.0" text="Price" />
+            <TableColumn fx:id="colDelete" prefWidth="95.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

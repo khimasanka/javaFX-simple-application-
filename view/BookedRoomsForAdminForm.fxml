@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookedRoomsForAdmContext" prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookedRoomsForAdminFormController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #7f8c8d;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#backToRoomDetailsWindowOnAction" prefHeight="24.0" prefWidth="51.0" text="Back" />
+            <Separator layoutX="27.0" layoutY="196.0" prefHeight="3.0" prefWidth="146.0" />
+            <Label layoutX="21.0" layoutY="248.0" text="Booked Rooms" textFill="WHITE">
+               <font>
+                  <Font name="Algerian" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="106.0" fitWidth="150.0" layoutX="47.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="159.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" layoutY="61.0" prefHeight="49.0" prefWidth="600.0" style="-fx-background-color: #3498db;" />
+      <AnchorPane layoutX="386.0" layoutY="29.0" prefHeight="64.0" prefWidth="228.0" style="-fx-background-color: #95E0E0; -fx-border-color: black; -fx-border-width: 2; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="13.0" layoutY="8.0" prefHeight="49.0" prefWidth="219.0" text="Booked Rooms">
+               <font>
+                  <Font name="Bauhaus 93" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView layoutX="211.0" layoutY="126.0" prefHeight="627.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="123.0">
+        <columns>
+          <TableColumn prefWidth="66.0" text="Id" />
+          <TableColumn prefWidth="67.0" text="Type" />
+            <TableColumn prefWidth="70.0" text="Capacity" />
+            <TableColumn prefWidth="292.0" text="Customers Name" />
+            <TableColumn prefWidth="105.0" text="Check in Date" />
+            <TableColumn prefWidth="117.0" text="Check out Date" />
+            <TableColumn prefWidth="162.0" text="Price Of Food Odered" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="550.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="-53.0" layoutY="-239.0" prefHeight="840.0" prefWidth="506.0" rotate="14.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="-51.0" AnchorPane.leftAnchor="-53.0" AnchorPane.rightAnchor="383.0" AnchorPane.topAnchor="-239.0">
+         <children>
+            <ImageView fitHeight="278.0" fitWidth="271.0" layoutX="154.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" rotate="-14.0">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="163.0" layoutY="632.0" rotate="-14.0" text="Blue Ocean" textFill="#ffd800">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="496.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="488.0" layoutY="204.0" text="Welcome">
+         <font>
+            <Font name="Bell MT" size="53.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="464.0" layoutY="285.0" prefHeight="233.0" prefWidth="253.0" style="-fx-background-color: #bfc2cc; -fx-background-radius: 25; -fx-border-color: black; -fx-border-radius: 25;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="43.0" layoutY="139.0" onAction="#openReceptionistLoginWindow" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #27ae60; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" text="Receptionist">
+               <font>
+                  <Font name="Bauhaus 93" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="43.0" layoutY="45.0" onAction="#openAdminLoginWindow" prefHeight="54.0" prefWidth="168.0" style="-fx-background-color: #27ae60; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" text="Admin">
+               <font>
+                  <Font name="Bauhaus 93" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

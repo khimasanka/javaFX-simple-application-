@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminLoginContext" prefHeight="550.0" prefWidth="836.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoginFormController">
+   <children>
+      <AnchorPane layoutX="-95.0" layoutY="-84.0" prefHeight="719.0" prefWidth="496.0" rotate="14.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="-85.0" AnchorPane.leftAnchor="-95.0" AnchorPane.rightAnchor="435.0" AnchorPane.topAnchor="-84.0">
+         <children>
+            <ImageView fitHeight="278.0" fitWidth="271.0" layoutX="152.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" rotate="-14.0">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="173.0" layoutY="465.0" rotate="-14.0" text="Blue Ocean" textFill="#ffd800">
+               <font>
+                  <Font name="Gill Sans Ultra Bold Condensed" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="20.0" layoutY="490.0" prefHeight="35.0" prefWidth="61.0" text="Admin">
+         <font>
+            <Font name="Bodoni MT Condensed Italic" size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToFirstWindow" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="505.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/user.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="497.0" layoutY="163.0" text="Welcome" textFill="#5100dd">
+         <font>
+            <Font name="Bell MT" size="53.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="442.0" layoutY="242.0" prefHeight="281.0" prefWidth="313.0" style="-fx-background-color: #bdc3c7; -fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;">
+         <children>
+            <JFXTextField fx:id="adminUserName" alignment="CENTER" labelFloat="true" layoutX="69.0" layoutY="40.0" onAction="#moveToPassword" prefHeight="41.0" prefWidth="223.0" promptText="user Name" style="-fx-background-color: white;" />
+            <ImageView fitHeight="51.0" fitWidth="61.0" layoutX="8.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="19.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0">
+               <image>
+                  <Image url="@../asserts/password%20key.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="admPassword" alignment="CENTER" labelFloat="true" layoutX="66.0" layoutY="120.0" onAction="#moveToLogin" prefHeight="41.0" prefWidth="230.0" promptText="Password" style="-fx-background-color: white;" />
+            <JFXButton fx:id="admLogin" buttonType="RAISED" layoutX="73.0" layoutY="194.0" onAction="#adminDashBoardOnAction" prefHeight="54.0" prefWidth="167.0" style="-fx-background-color: #1b7cb8; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: black;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="29.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="wrongDetails" layoutX="73.0" layoutY="161.0" prefHeight="21.0" prefWidth="223.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

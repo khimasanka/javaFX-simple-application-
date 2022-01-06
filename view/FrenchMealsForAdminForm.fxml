@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="630.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrenchMealsForAdminFormController">
+   <children>
+      <Label layoutX="772.0" prefHeight="55.0" prefWidth="126.0" text="French" underline="true">
+         <font>
+            <Font name="Trebuchet MS Bold" size="32.0" />
+         </font>
+      </Label>
+      <TableView layoutX="3.0" layoutY="199.0" prefHeight="426.0" prefWidth="886.0">
+         <columns>
+            <TableColumn prefWidth="94.0" text="Meal no" />
+            <TableColumn prefWidth="172.0" text="Meal  Name" />
+            <TableColumn prefWidth="172.0" text="Price" />
+            <TableColumn prefWidth="172.0" text="Oders" />
+            <TableColumn prefWidth="146.0" text="Meal Time" />
+            <TableColumn prefWidth="129.0" text="Modify" />
+         </columns>
+      </TableView>
+      <JFXTextField alignment="CENTER" labelFloat="true" layoutX="14.0" layoutY="86.0" prefHeight="31.0" prefWidth="108.0" promptText="no" />
+      <JFXTextField alignment="CENTER" labelFloat="true" layoutX="146.0" layoutY="86.0" prefHeight="31.0" prefWidth="289.0" promptText="meal name" />
+      <JFXTextField alignment="CENTER" labelFloat="true" layoutX="458.0" layoutY="86.0" prefHeight="31.0" prefWidth="189.0" promptText="price" />
+      <JFXTextField alignment="CENTER" labelFloat="true" layoutX="682.0" layoutY="86.0" prefHeight="31.0" prefWidth="179.0" promptText="oders" />
+      <JFXTextField alignment="CENTER" labelFloat="true" layoutX="14.0" layoutY="152.0" prefHeight="31.0" prefWidth="219.0" promptText="meal time" />
+      <JFXButton buttonType="RAISED" layoutX="739.0" layoutY="143.0" onAction="#saveFrenchOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #3498db; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

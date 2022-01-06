@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminDashBoardContext" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="280.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Label layoutX="43.0" layoutY="251.0" prefHeight="65.0" prefWidth="194.0" text="Dash Board" textFill="#511212">
+               <font>
+                  <Font name="Algerian" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="79.0" fitWidth="103.0" layoutX="101.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/dashboaard.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="40.0" layoutY="164.0" prefWidth="200.0" />
+            <JFXButton alignment="CENTER_RIGHT" layoutX="3.0" layoutY="500.0" onAction="#adminLogOutOnAction" prefHeight="47.0" prefWidth="116.0" text="Log Out" textFill="#e80c0c">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="7.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/log%20Out.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="150.0" layoutX="87.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/hotel.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="90.0" layoutY="120.0" text="Blue Ocean">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="280.0" layoutY="60.0" prefHeight="79.0" prefWidth="519.0" style="-fx-background-color: #bdc3c7;" />
+      <ImageView fitHeight="104.0" fitWidth="92.0" layoutX="334.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/rooms.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="494.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/meals.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="646.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/incoms.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="329.0" layoutY="191.0" onAction="#roomsDetailsOnAction" prefHeight="134.0" prefWidth="102.0" style="-fx-background-color: Transparent;" text="Rooms">
+         <font>
+            <Font name="Bell MT" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="489.0" layoutY="191.0" onAction="#mealsDetailsOnAction" prefHeight="134.0" prefWidth="102.0" style="-fx-background-color: Transparent;" text="Meals">
+         <font>
+            <Font name="Bell MT" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="BOTTOM" layoutX="641.0" layoutY="191.0" onAction="#incomeDetailsOnAction" prefHeight="134.0" prefWidth="102.0" style="-fx-background-color: Transparent;" text="Incoms">
+         <font>
+            <Font name="Bell MT" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
